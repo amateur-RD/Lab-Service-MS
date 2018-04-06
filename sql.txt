@@ -1,0 +1,77 @@
+create database itil  DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+create table user(userid char(18) primary key,
+                  username char(10) not null,
+                  password char(20) not null,
+                  type char(20),
+                  telephone char(15),
+                  email char(30)
+                  )charset=utf8;
+create table equipment(eqid char(20) not null primary key,
+                       eqname char(20) UNIQUE ,
+                       eqtype char(20) not null,
+                       eqdetail text,
+                       eqtime datetime,
+                       eqnum int
+                       )charset=utf8;
+create table location(locid int primary key auto_increment,
+                      locname char(20) UNIQUE,
+                      locspace int not null,
+                      locdescription text 
+                      )charset=utf8;
+create table hardsoft(hsid int primary key auto_increment,
+                      eqid char(20) not null,
+                      locid int not null,
+                      hsnumber int not null,
+                      hsip char(20),
+                      hsstate char(10),
+                      constraint  fk_hs_eqment foreign key(eqid) references equipment(eqid),
+                      constraint  fk_hs_loction foreign key(locid) references location(locid)
+                      )charset=utf8;
+create table system(sysid int not null primary key auto_increment,
+                    sysname char(20)  UNIQUE,
+                    systype char(20) not null
+                    )charset=utf8;
+create table soft(sid int  primary key auto_increment,
+                  sname char(20)  UNIQUE,
+                  stype char(20) not null,
+                  sinstruction text
+                  )charset=utf8;
+create table softinstall(infoid int primary key auto_increment,
+                         hsid int not null,
+                         sysid int not null,
+                         sid int not null,
+                         time datetime,
+                         userid char(18),
+                         constraint fk_soint_hs foreign key(hsid) references hardsoft(hsid),
+                         constraint fk_soint_soft foreign key(sid) references soft(sid),
+                         constraint fk_soint_sys foreign key(sysid) references system(sysid),
+                         constraint fk_soint_user foreign key(userid) references user(userid) 
+                         )charset=utf8;
+create table preventivenotes(noteid int primary key,
+                             hsid int not null,
+                             infoid int not null,
+                             origin char(20) not null,
+                             date char(20),
+                             phenomenon text,
+                             solution text,
+                             userid char(18),
+                             constraint fk_pre_hs foreign key(hsid) references hardsoft(hsid),
+                             constraint fk_pre_soint foreign  key(infoid) references softinstall(infoid),
+                             constraint fk_pre_user foreign  key(userid) references user(userid)
+                             )charset=utf8;
+create table problem(proid int not null primary key,
+                     userid char(18) not null,
+                     prodate datetime not null,
+                     hsnumber int not null,
+                     locname char(20) not null,
+                     sysname char(20) ,
+                     softname char(20),
+                     type char(16),
+                     prostate char(6),
+                     prophenomenon text NOT NULL,
+                     prosolution text,
+                     constraint fk_pro_user foreign  key(userid) references user(userid)
+                  )charset=utf8;
+insert into user (userid,username,password,type,telephone,email)values ('110201200311200','周伟','zhouwei921029','学生','18362973007','1748566927@qq.com');
+insert into user (userid,username,password,type,telephone,email)values ('B12110931','程阳','111111','学生','18362973203','1300369803@qq.com');
