@@ -1,3 +1,8 @@
-# LMS
-1.文件“struts2实现用户登录注册功能.jar”为导出的完整项目，解压导入eclipse即可运行。
-2.文件“lms.txt”为数据库创建的SQL语句
+# Lab-Service-MS
+Lab-Service-MS（Lab-Service-Management-System），实验室服务管理系统。本系统是基于ITIL（Information Technology Infrastructure Library,IT基础架构库）思想，对实验室的配置（软件、硬件、系统、设备、位置）进行管理，主要包括：配置管理、事件管理和知识库管理三大部分。
+
+## 需求分析
+
+## 功能介绍
+
+
