@@ -1,0 +1,70 @@
+body {
+	margin-left: 3px;
+	margin-top: 0px;
+	margin-right: 3px;
+	margin-bottom: 0px;
+}
+ a:link {    color:#0033FF;        text-decoration:none; }   
+ a:visited {    color:#0033FF;      }    
+ a:hover {    color:#0033FF;      }    
+ a:active {    color:#0033FF;       }
+.bs-docs-example {
+    background-color: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px 4px 4px 4px;
+    margin: 15px 0;
+    padding: 39px 19px 14px;
+    position: relative;
+}
+.bs-docs-example:after {
+    background-color: #F5F5F5;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px 0 4px 0;
+    color: #9DA0A4;
+    font-size: 12px;
+    font-weight: bold;
+    left: -1px;
+    padding: 3px 7px;
+    position: absolute;
+    top: -1px;
+}
+.bs-docs-example-submenus .dropup > .dropdown-menu, .bs-docs-example-submenus .dropdown > .dropdown-menu {
+    display: block;
+    margin-bottom: 5px;
+    position: static;
+}
+.bs-docs-example-submenus {
+    min-height: 180px;
+}
+.close{float:right;font-size:20px;font-weight:bold;line-height:20px;color:#000;text-shadow:0 1px 0 #fff;opacity:.2;filter:alpha(opacity=20)}
+button.close{padding:0;cursor:pointer;background:transparent;border:0;-webkit-appearance:none}
+.close:hover,.close:focus{color:#000;text-decoration:none;cursor:pointer;opacity:.4;filter:alpha(opacity=40)}
+.STYLE1 {
+	color: #e1e2e3;
+	font-size: 12px;
+}
+.STYLE6 {color: #000000; font-size: 12; }
+.STYLE7 { overflow:hidden; text-overflow:ellipsis;color: #000000; font-size: 12;}
+.STYLE23 { overflow:hidden; text-overflow:ellipsis;color: #000000; font-size:16;}
+.STYLE10 {color: #000000; font-size: 12px; }
+.STYLE19 {
+	color: #344b50;
+	font-size: 12px;
+}
+.STYLE21 {
+	font-size: 12px;
+	color: #3b6375;
+}
+.STYLE22 {
+	font-size: 12px;
+	color: #295568;
+}
+.alert{
+padding:8px 35px 8px 14px;
+margin-bottom:20px;
+text-shadow:0 1px 0 rgba(255,255,255,0.5);
+background-color:#fcf8e3;border:1px solid #fbeed5;
+-webkit-border-radius:4px;-moz-border-radius:4px;
+border-radius:4px}
+.alert-info{
+color:#3a87ad;background-color:#d9edf7;border-color:#bce8f1}
