@@ -7,13 +7,13 @@ Lab-Service-MS（Lab-Service-Management-System），实验室服务管理系统�
     * 系统中添加人性化服务，采用计算机故障提示机制，避免用户使用已经发生故障的计算机。
     * 该系统可以让非专业技术人员也可以通过此系统提供的共享配置信息资源，及时排除故障。
 * E-R图<br>
-![E-R图](https://github.com/amateur-RD/Lab-Service-MS/raw/master/E-R图.png)
+![E-R图](https://github.com/amateur-RD/Lab-Service-MS/raw/master/demo/E-R图.png)
 
 * 功能图<br>
-![功能图](https://github.com/amateur-RD/Lab-Service-MS/raw/master/功能图.png)
+![功能图](https://github.com/amateur-RD/Lab-Service-MS/raw/master/demo/功能图.png)
 
 
 ## 系统演示
-![演示图](https://github.com/amateur-RD/Lab-Service-MS/raw/master/演示.gif)
+![演示图](https://github.com/amateur-RD/Lab-Service-MS/raw/master/demo/演示.gif)
 
 
